@@ -1,69 +1,95 @@
-# React + TypeScript + Vite
+# Test Pokemon App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación front end para mostrar pokemones, creada con **React**, **Vite**, y **TypeScript**.
 
-Currently, two official plugins are available:
+## Requerimientos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (v16 o superior)
+- [npm](https://www.npmjs.com/) o [Yarn](https://yarnpkg.com/) (recomendado)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Sigue estos pasos para clonar el repositorio, instalar las dependencias y levantar el proyecto.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1. Clonar el repositorio
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clona el repositorio desde GitHub:
+
+```bash
+git clone https://github.com/antmol/test-pokemon-app
+```
+Navega al directorio del proyecto:
+
+```bash
+cd test-pokemon-app
+```
+### 2. Instalar dependencias
+Instala las dependencias del proyecto usando npm o Yarn:
+
+```bash
+npm install
+```
+### 3. Levantar el proyecto
+Una vez instaladas las dependencias, puedes levantar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+### 4. Construir para producción
+Si deseas construir el proyecto para producción, ejecuta:
+
+```bash
+npm run build
+```
+5. Servir la versión de producción
+Para servir la versión de producción localmente, puedes usar:
+
+```bash
+npm run preview
+```
+### Estructura del proyecto
+El proyecto está organizado de la siguiente manera:
+```bash
+streaming-demo-app/
+├── public/                 # Archivos públicos (imágenes, favicon, etc.)
+├── src/                    # Código fuente de la aplicación
+│   ├── App.css/            # Estilos
+│   ├── App.tsx             # Componente principal de la aplicación
+│   ├── main.tsx            # Punto de entrada de la aplicación
+│   └── index.css           # Estilos globales
+├── .env                    # Variables de entorno (opcional)
+├── .gitignore              # Archivos y carpetas ignorados por Git
+├── package.json            # Dependencias y scripts del proyecto
+├── tsconfig.json           # Configuración de TypeScript
+└── vite.config.ts          # Configuración de Vite
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Dependencias principales
+React: Biblioteca para construir interfaces de usuario.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Vite: Herramienta de construcción rápida para proyectos modernos.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Redux: Manejo del estado global de la aplicación.
+
+React Router: Navegación entre páginas.
+
+TypeScript: Tipado estático para JavaScript.
+
+Axios: Cliente HTTP para realizar peticiones a la API.
+
+### Contribuir
+Si deseas contribuir a este proyecto, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+
+2. Crea una rama con tu nueva funcionalidad (git checkout -b feature/nueva-funcionalidad).
+
+3. Realiza tus cambios y haz commit (git commit -m 'Agrega nueva funcionalidad').
+
+4. Sube tus cambios a GitHub (git push origin feature/nueva-funcionalidad).
+
+5. Abre un Pull Request en GitHub.
+
+### Licencia
+Este proyecto está bajo la licencia MIT.
